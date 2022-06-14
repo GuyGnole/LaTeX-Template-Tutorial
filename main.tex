@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper,twoside]{report}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{xcolor}
+\definecolor{redcolor}{HTML}{E22421}
+\definecolor{bluecolor}{HTML}{003F61}
+
+\usepackage{graphicx}
+\graphicspath{{img/}}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage{xcolor}
+\usepackage{sectsty}
+
+\allsectionsfont{\color{bluecolor}}
+
+\usepackage{lipsum}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+
+\begin{document}
+
+\subfile{files/titlepage.tex}
+
+\subfile{files/abstract.tex}
+
+\newpage
+\pagenumbering{Roman}
+
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
+\subfile{files/introduction.tex}
+\subfile{files/theory.tex}
+\subfile{files/methodology.tex}
+\subfile{files/results.tex}
+\subfile{files/discussion.tex}
+\subfile{files/conclusion.tex}
+
+
+\newpage
+\bibliographystyle{abbrv}
+\bibliography{ref}
+
+
+\end{document}
