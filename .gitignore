@@ -8,3 +8,5 @@
 *.gz
 *.toc
 *.log
+*.bcf
+*.xml

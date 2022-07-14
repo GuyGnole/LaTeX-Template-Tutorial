@@ -3,6 +3,8 @@
 \usepackage{docinfo}
 \usepackage{preambel}
 
+\addbibresource{ref.bib}
+
 \begin{document}
 
 \subfile{files/titlepage.tex}
@@ -43,10 +45,10 @@
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 
 
-\bibliographystyle{abbrv}
-\bibliography{ref}
-
-
 \appendix
+
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+\printbibliography
+\thispagestyle{empty}
 
 \end{document}
