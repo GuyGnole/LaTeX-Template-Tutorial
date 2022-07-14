@@ -1,21 +1,29 @@
+% -------------------------------------------------------------------------------------------------
+% This file is the main file of this LaTeX project.
+% You should not have the need of modifying this file
+% -------------------------------------------------------------------------------------------------
+
 \documentclass[12pt,a4paper,twoside]{report}
 
+% Custom package
 \usepackage{docinfo}
 \usepackage{preambel}
 
+% Bibliography file
 \addbibresource{ref.bib}
 
 \begin{document}
 
 \subfile{files/titlepage.tex}
 
+% Continue to write on the right page
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 
 \subfile{files/abstract.tex}
 
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 
-
+% Table of Content
 \pagenumbering{Roman}
 \tableofcontents
 \thispagestyle{ToC-fancy-style}
@@ -47,6 +55,7 @@
 
 \appendix
 
+% Bibliography
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 \printbibliography
 \thispagestyle{empty}
