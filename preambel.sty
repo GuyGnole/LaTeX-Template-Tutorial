@@ -1,9 +1,13 @@
+% -------------------------------------------------------------------------------------------------
+% This file is the preambel of main.tex
+% You should not have the need of modifying this file
+% -------------------------------------------------------------------------------------------------
+
 \ProvidesPackage{preambel}
 
+% Styling and geometry part
 \usepackage[left=2cm,right=2cm,top=3cm,bottom=2.5cm]{geometry}
-
 \usepackage{fancyhdr}
-
 \fancypagestyle{IHA-fancy-style}{%
 	\fancyhf{}% Clear header and footer
 	\fancyhead[RE]{\rightmark}
@@ -13,7 +17,6 @@
 	\renewcommand{\headrulewidth}{0.4pt}% Line at the header visible
 	\renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
-
 \fancypagestyle{ToC-fancy-style}{%
 	\fancyhf{}%
 	\fancyfoot[C]{\thepage}
@@ -30,17 +33,25 @@
 	\renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
 
+
+% Font part
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{helvet}
 
+
+%Color part
 \usepackage{xcolor}
 \definecolor{redcolor}{HTML}{E22421}
 \definecolor{bluecolor}{HTML}{003F61}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\usepackage{sectsty}
+\allsectionsfont{\color{bluecolor}}
 
-\usepackage{graphicx}
-\graphicspath{{img/}}
 
+% Link part
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -50,21 +61,11 @@
     urlcolor=blue
 }
 
-\usepackage[export]{adjustbox}
-\usepackage{subcaption}
 
-\usepackage{xcolor}
-\usepackage{sectsty}
 
-\allsectionsfont{\color{bluecolor}}
 
+% Listing part
 \usepackage{listings}
-
-% Define a custom color
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-\definecolor{codegreen}{rgb}{0,0.6,0}
-
-
 \lstdefinestyle{myStyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
@@ -77,14 +78,16 @@
     showspaces=false,                
     showstringspaces=false,
     showtabs=false,                  
-    tabsize=2,
+    tabsize=4,
 }
-
-% Use \lstset to make myStyle the global default
 \lstset{style=myStyle}
 
+
+% Misc
 \usepackage{lipsum}
-
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage[export]{adjustbox}
+\usepackage{subcaption}
 \usepackage[backend=biber]{biblatex}
-
 \usepackage{subfiles} % Best loaded last in the preamble
